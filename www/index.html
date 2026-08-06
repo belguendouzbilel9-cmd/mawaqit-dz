@@ -1,0 +1,1292 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>مواقيت الصلاة — الجزائر</title>
+
+<!-- PWA: installable as an app -->
+<link rel="manifest" href="./manifest.json">
+<meta name="theme-color" content="#0A1F1C">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="مواقيت">
+<link rel="icon" type="image/png" sizes="32x32" href="data:image/png;base64,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">
+<link rel="apple-touch-icon" href="data:image/png;base64,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">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Tajawal:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg-deep:#0A1F1C;
+    --bg-card:#12302A;
+    --bg-card-hi:#173B33;
+    --gold:#CBA135;
+    --gold-soft:#E4C878;
+    --green:#3E9169;
+    --red:#9C3B47;
+    --cream:#F3EFE0;
+    --muted:#8FA69C;
+    --line:#254E44;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html,body{height:100%;}
+  body{
+    background:
+      radial-gradient(ellipse 900px 500px at 50% -10%, #16382F 0%, transparent 60%),
+      var(--bg-deep);
+    color:var(--cream);
+    font-family:'Tajawal', sans-serif;
+    min-height:100vh;
+    padding:20px 14px 60px;
+    -webkit-font-smoothing:antialiased;
+  }
+  .wrap{max-width:760px; margin:0 auto;}
+
+  .dedication{
+    text-align:center;
+    font-family:'Amiri', serif;
+    font-size:clamp(14px, 3.6vw, 17px);
+    color:var(--gold-soft);
+    background:linear-gradient(90deg, transparent, rgba(203,161,53,0.12), transparent);
+    border-top:1px solid var(--line);
+    border-bottom:1px solid var(--line);
+    padding:12px 10px;
+    letter-spacing:0.3px;
+    line-height:1.7;
+  }
+
+  /* ---- Header / Mihrab arch ---- */
+  header{
+    position:relative;
+    text-align:center;
+    padding:34px 16px 26px;
+    margin-bottom:18px;
+  }
+  .arch-svg{
+    position:absolute;
+    top:0; left:50%;
+    transform:translateX(-50%);
+    width:min(520px, 92%);
+    height:auto;
+    opacity:0.55;
+    pointer-events:none;
+  }
+  .brand{
+    position:relative;
+    z-index:2;
+    font-family:'Amiri', serif;
+    font-size:clamp(28px, 6vw, 40px);
+    font-weight:700;
+    color:var(--gold-soft);
+    letter-spacing:1px;
+  }
+  .brand-sub{
+    position:relative; z-index:2;
+    font-size:13px;
+    color:var(--muted);
+    margin-top:6px;
+    letter-spacing:2px;
+  }
+
+  select#wilaya{
+    position:relative; z-index:2;
+    margin-top:18px;
+    background:var(--bg-card);
+    color:var(--cream);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:11px 18px;
+    font-family:'Tajawal', sans-serif;
+    font-size:15px;
+    font-weight:500;
+    min-width:220px;
+    text-align:center;
+    appearance:none;
+    cursor:pointer;
+  }
+  select#wilaya:focus{outline:2px solid var(--gold);}
+
+  /* ---- Dates ---- */
+  .dates{
+    text-align:center;
+    color:var(--muted);
+    font-size:13px;
+    margin-bottom:22px;
+    display:flex;
+    justify-content:center;
+    gap:18px;
+    flex-wrap:wrap;
+  }
+  .dates b{color:var(--gold-soft); font-weight:500;}
+
+  /* ---- Hero countdown ---- */
+  .hero{
+    background:linear-gradient(180deg, var(--bg-card-hi), var(--bg-card));
+    border:1px solid var(--line);
+    border-radius:20px;
+    padding:30px 20px 26px;
+    text-align:center;
+    margin-bottom:22px;
+    position:relative;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:"";
+    position:absolute; inset:0;
+    background:
+      repeating-linear-gradient(45deg, rgba(203,161,53,0.035) 0 2px, transparent 2px 22px),
+      repeating-linear-gradient(-45deg, rgba(203,161,53,0.035) 0 2px, transparent 2px 22px);
+    pointer-events:none;
+  }
+  .hero-label{
+    font-size:13px; color:var(--muted); letter-spacing:1px; margin-bottom:8px; position:relative;
+  }
+  .hero-prayer{
+    font-family:'Amiri', serif;
+    font-size:clamp(30px, 8vw, 46px);
+    font-weight:700;
+    color:var(--gold-soft);
+    position:relative;
+  }
+  .hero-countdown{
+    font-size:clamp(38px, 11vw, 58px);
+    font-weight:900;
+    font-variant-numeric:tabular-nums;
+    letter-spacing:1px;
+    margin:10px 0 4px;
+    position:relative;
+    direction:ltr;
+  }
+  .hero-time{
+    color:var(--muted);
+    font-size:14px;
+    position:relative;
+  }
+
+  /* ---- Prayer grid ---- */
+  .grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(130px, 1fr));
+    gap:10px;
+    margin-bottom:22px;
+  }
+  .card{
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:16px 12px;
+    text-align:center;
+    transition:border-color .3s, background .3s;
+  }
+  .card.active{
+    border-color:var(--gold);
+    background:linear-gradient(180deg, rgba(203,161,53,0.14), var(--bg-card));
+  }
+  .card .name{
+    font-family:'Amiri', serif;
+    font-size:19px;
+    font-weight:700;
+    color:var(--cream);
+    margin-bottom:8px;
+  }
+  .card.active .name{color:var(--gold-soft);}
+  .card .adhan{
+    font-size:22px;
+    font-weight:700;
+    font-variant-numeric:tabular-nums;
+    direction:ltr;
+  }
+  .card .iqama{
+    margin-top:8px;
+    padding-top:8px;
+    border-top:1px dashed var(--line);
+    font-size:12px;
+    color:var(--muted);
+  }
+  .card .iqama b{
+    color:var(--green);
+    font-variant-numeric:tabular-nums;
+    direction:ltr;
+    display:inline-block;
+  }
+
+  /* ---- Controls ---- */
+  .controls{
+    display:flex; gap:10px; justify-content:center; flex-wrap:wrap;
+    margin-bottom:26px;
+  }
+  .btn{
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    color:var(--cream);
+    padding:11px 20px;
+    border-radius:10px;
+    font-family:'Tajawal', sans-serif;
+    font-size:14px;
+    font-weight:500;
+    cursor:pointer;
+    display:flex; align-items:center; gap:8px;
+  }
+  .btn.on{border-color:var(--green); color:var(--gold-soft);}
+  .btn:active{transform:scale(.97);}
+  .dot{width:8px; height:8px; border-radius:50%; background:var(--muted);}
+  .btn.on .dot{background:var(--green); box-shadow:0 0 6px var(--green);}
+
+  .adhan-picker{
+    margin-top:14px;
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:12px 14px;
+  }
+  .adhan-picker-title{
+    color:var(--gold-soft);
+    font-size:14px;
+    margin-bottom:10px;
+    text-align:center;
+  }
+  .adhan-options{
+    display:flex;
+    flex-direction:column;
+    gap:8px;
+  }
+  .adhan-option{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+    background:var(--bg-card-hi);
+    border:1px solid var(--line);
+    border-radius:10px;
+    padding:9px 12px;
+    cursor:pointer;
+    transition:border-color .15s;
+  }
+  .adhan-option.selected{
+    border-color:var(--gold);
+  }
+  .adhan-option-name{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    color:var(--cream);
+    font-size:14px;
+  }
+  .adhan-radio{
+    width:16px; height:16px;
+    border-radius:50%;
+    border:2px solid var(--muted);
+    flex:none;
+  }
+  .adhan-option.selected .adhan-radio{
+    border-color:var(--gold);
+    background:radial-gradient(var(--gold) 0 40%, transparent 45%);
+  }
+  .adhan-preview-btn{
+    width:34px; height:34px;
+    border-radius:50%;
+    border:1px solid var(--line);
+    background:transparent;
+    color:var(--gold-soft);
+    font-size:14px;
+    flex:none;
+    cursor:pointer;
+  }
+  .adhan-preview-btn.playing{
+    border-color:var(--gold);
+    color:var(--gold);
+  }
+
+  .adhkar-section{
+    margin-top:14px;
+    background:var(--bg-card);
+    border:1px solid var(--line);
+    border-radius:14px;
+    padding:14px;
+  }
+  .adhkar-header{ text-align:center; margin-bottom:12px; }
+  .adhkar-title{ font-family:'Amiri', serif; font-size:19px; color:var(--gold-soft); font-weight:700; }
+  .adhkar-sub{ font-size:12px; color:var(--muted); margin-top:3px; }
+
+  .adhkar-tabs{
+    display:flex; gap:6px; overflow-x:auto; padding-bottom:8px; margin-bottom:10px;
+    border-bottom:1px solid var(--line);
+  }
+  .adhkar-tab{
+    flex:none;
+    background:var(--bg-card-hi);
+    border:1px solid var(--line);
+    color:var(--muted);
+    border-radius:9px;
+    padding:8px 13px;
+    font-size:13px;
+    font-family:'Tajawal', sans-serif;
+    cursor:pointer;
+    white-space:nowrap;
+  }
+  .adhkar-tab.active{
+    border-color:var(--gold);
+    color:var(--gold-soft);
+    background:linear-gradient(180deg, rgba(203,161,53,0.14), var(--bg-card-hi));
+  }
+
+  .adhkar-list{ display:flex; flex-direction:column; gap:10px; }
+  .adhkar-item{
+    background:var(--bg-card-hi);
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:13px 14px;
+  }
+  .adhkar-item-text{
+    font-family:'Amiri', serif;
+    font-size:16.5px;
+    line-height:2.1;
+    color:var(--cream);
+  }
+  .adhkar-item-footer{
+    display:flex; justify-content:space-between; align-items:center;
+    margin-top:9px; padding-top:8px; border-top:1px dashed var(--line);
+  }
+  .adhkar-item-count{ font-size:12.5px; color:var(--green); font-weight:600; }
+  .adhkar-item-src{ font-size:11px; color:var(--muted); }
+
+  .adhkar-done-bar{
+    display:flex; justify-content:center; margin-top:12px;
+  }
+  .adhkar-done-btn{
+    background:var(--bg-card-hi);
+    border:1px solid var(--green);
+    color:var(--gold-soft);
+    border-radius:10px;
+    padding:11px 22px;
+    font-family:'Tajawal', sans-serif;
+    font-size:14px;
+    font-weight:700;
+    cursor:pointer;
+  }
+  .adhkar-done-btn.done{
+    background:linear-gradient(180deg, rgba(62,145,105,0.25), var(--bg-card-hi));
+    color:var(--green);
+  }
+
+  .status{
+    text-align:center;
+    font-size:12.5px;
+    color:var(--muted);
+    margin-bottom:20px;
+    min-height:16px;
+  }
+
+  /* ---- Footer / dedication ---- */
+  footer{
+    text-align:center;
+    padding-top:14px;
+    border-top:1px solid var(--line);
+  }
+  footer p{
+    font-family:'Amiri', serif;
+    font-size:16px;
+    color:var(--gold-soft);
+    line-height:1.9;
+    margin-bottom:6px;
+  }
+  footer span{
+    display:block;
+    color:var(--muted);
+    font-size:12.5px;
+  }
+
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  .pulse{animation:pulseGlow 1.4s ease-in-out infinite;}
+  @keyframes pulseGlow{
+    0%,100%{box-shadow:0 0 0 rgba(203,161,53,0);}
+    50%{box-shadow:0 0 26px rgba(203,161,53,0.55);}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <div class="dedication">صدقة جارية لوجه الله — ادعوا لي إن كنت حياً أو ميتاً</div>
+
+  <header>
+    <svg class="arch-svg" viewBox="0 0 400 160" fill="none">
+      <path d="M20 160 V80 C20 30 60 6 100 6 H300 C340 6 380 30 380 80 V160" stroke="#CBA135" stroke-width="1.4"/>
+      <path d="M50 160 V90 C50 48 80 26 100 26 H300 C320 26 350 48 350 90 V160" stroke="#3E9169" stroke-width="1" opacity="0.6"/>
+      <circle cx="200" cy="46" r="5" fill="#CBA135" opacity="0.7"/>
+    </svg>
+    <div class="brand">مواقيت الصلاة</div>
+    <div class="brand-sub">الجزائر · حسب الولاية</div>
+    <select id="wilaya">
+      <option value="Adrar">أدرار</option>
+      <option value="Chlef">الشلف</option>
+      <option value="Laghouat">الأغواط</option>
+      <option value="Oum El Bouaghi">أم البواقي</option>
+      <option value="Batna">باتنة</option>
+      <option value="Bejaia">بجاية</option>
+      <option value="Biskra">بسكرة</option>
+      <option value="Bechar">بشار</option>
+      <option value="Blida">البليدة</option>
+      <option value="Bouira">البويرة</option>
+      <option value="Tamanrasset">تمنراست</option>
+      <option value="Tebessa">تبسة</option>
+      <option value="Tlemcen">تلمسان</option>
+      <option value="Tiaret">تيارت</option>
+      <option value="Tizi Ouzou">تيزي وزو</option>
+      <option value="Algiers">الجزائر العاصمة</option>
+      <option value="Djelfa">الجلفة</option>
+      <option value="Jijel">جيجل</option>
+      <option value="Setif">سطيف</option>
+      <option value="Saida">سعيدة</option>
+      <option value="Skikda">سكيكدة</option>
+      <option value="Sidi Bel Abbes">سيدي بلعباس</option>
+      <option value="Annaba">عنابة</option>
+      <option value="Guelma">قالمة</option>
+      <option value="Constantine">قسنطينة</option>
+      <option value="Medea">المدية</option>
+      <option value="Mostaganem">مستغانم</option>
+      <option value="M'Sila">المسيلة</option>
+      <option value="Mascara">معسكر</option>
+      <option value="Ouargla">ورقلة</option>
+      <option value="Oran" selected>وهران</option>
+      <option value="El Bayadh">البيض</option>
+      <option value="Illizi">إليزي</option>
+      <option value="Bordj Bou Arreridj">برج بوعريريج</option>
+      <option value="Boumerdes">بومرداس</option>
+      <option value="El Tarf">الطارف</option>
+      <option value="Tindouf">تندوف</option>
+      <option value="Tissemsilt">تيسمسيلت</option>
+      <option value="El Oued">الوادي</option>
+      <option value="Khenchela">خنشلة</option>
+      <option value="Souk Ahras">سوق أهراس</option>
+      <option value="Tipaza">تيبازة</option>
+      <option value="Mila">ميلة</option>
+      <option value="Ain Defla">عين الدفلى</option>
+      <option value="Naama">النعامة</option>
+      <option value="Ain Temouchent">عين تموشنت</option>
+      <option value="Ghardaia">غرداية</option>
+      <option value="Relizane">غليزان</option>
+      <option value="Ouled Djellal">أولاد جلال</option>
+      <option value="Beni Abbes">بني عباس</option>
+      <option value="Touggourt">تقرت</option>
+      <option value="Timimoun">تيميمون</option>
+      <option value="Djanet">جانت</option>
+      <option value="In Salah">عين صالح</option>
+      <option value="In Guezzam">عين قزام</option>
+      <option value="Bordj Badji Mokhtar">برج باجي مختار</option>
+      <option value="El Meghaier">المغير</option>
+      <option value="El Meniaa">المنيعة</option>
+    </select>
+  </header>
+
+  <div class="dates">
+    <span id="gregDate">—</span>
+    <span><b id="hijriDate">—</b></span>
+  </div>
+
+  <div class="hero" id="heroBox">
+    <div class="hero-label">الصلاة القادمة</div>
+    <div class="hero-prayer" id="nextName">—</div>
+    <div class="hero-countdown" id="countdown">--:--:--</div>
+    <div class="hero-time" id="nextTime">—</div>
+  </div>
+
+  <div class="grid" id="grid"></div>
+
+  <div class="controls">
+    <button class="btn" id="installBtn" style="display:none"><span class="dot"></span> تثبيت التطبيق على الهاتف</button>
+    <button class="btn" id="notifBtn"><span class="dot"></span> تفعيل تنبيهات المتصفح</button>
+    <button class="btn" id="soundBtn"><span class="dot"></span> الصوت عند الأذان</button>
+  </div>
+  <div class="controls" id="nativeControls" style="display:none">
+    <button class="btn on" id="nativeScheduleBtn" style="border-color:var(--green);">
+      <span class="dot"></span> ✅ التنبيهات الخلفية مفعّلة (٣٥ يوم القادمة)
+    </button>
+  </div>
+
+  <div class="controls">
+    <button class="btn" id="testAdhanBtn" style="border-color:var(--gold);"><span class="dot"></span> 🔊 جرّب تنبيه الأذان الآن</button>
+    <button class="btn" id="testIqamaBtn"><span class="dot"></span> 🔔 جرّب تنبيه الإقامة</button>
+  </div>
+
+  <div class="adhan-picker">
+    <div class="adhan-picker-title">اختر صوت الأذان</div>
+    <div class="adhan-options" id="adhanOptions"></div>
+  </div>
+
+  <div class="adhkar-section">
+    <div class="adhkar-header">
+      <div class="adhkar-title">📿 الأذكار والأدعية</div>
+      <div class="adhkar-sub">من حصن المسلم — تُذكّرك تلقائياً في وقتها</div>
+    </div>
+    <div class="adhkar-tabs" id="adhkarTabs"></div>
+    <div class="adhkar-list" id="adhkarList"></div>
+    <div class="adhkar-done-bar">
+      <button class="adhkar-done-btn" id="adhkarDoneBtn">✓ قرأتها اليوم</button>
+    </div>
+  </div>
+
+  <div class="status" id="statusMsg"></div>
+
+  <footer>
+    <p>اللهم اجعل هذا العمل صدقة جارية لصاحبه، وانفع به من رآه</p>
+    <span>أوقات الصلاة محسوبة بطريقة الجزائر الرسمية (Aladhan API) — تحدَّث تلقائياً كل يوم</span>
+  </footer>
+
+</div>
+
+<script>
+// ---------------- Wilayas (58) ----------------
+const WILAYAS = [
+  ["أدرار","Adrar"],["الشلف","Chlef"],["الأغواط","Laghouat"],["أم البواقي","Oum El Bouaghi"],
+  ["باتنة","Batna"],["بجاية","Bejaia"],["بسكرة","Biskra"],["بشار","Bechar"],
+  ["البليدة","Blida"],["البويرة","Bouira"],["تمنراست","Tamanrasset"],["تبسة","Tebessa"],
+  ["تلمسان","Tlemcen"],["تيارت","Tiaret"],["تيزي وزو","Tizi Ouzou"],["الجزائر العاصمة","Algiers"],
+  ["الجلفة","Djelfa"],["جيجل","Jijel"],["سطيف","Setif"],["سعيدة","Saida"],
+  ["سكيكدة","Skikda"],["سيدي بلعباس","Sidi Bel Abbes"],["عنابة","Annaba"],["قالمة","Guelma"],
+  ["قسنطينة","Constantine"],["المدية","Medea"],["مستغانم","Mostaganem"],["المسيلة","M'Sila"],
+  ["معسكر","Mascara"],["ورقلة","Ouargla"],["وهران","Oran"],["البيض","El Bayadh"],
+  ["إليزي","Illizi"],["برج بوعريريج","Bordj Bou Arreridj"],["بومرداس","Boumerdes"],["الطارف","El Tarf"],
+  ["تندوف","Tindouf"],["تيسمسيلت","Tissemsilt"],["الوادي","El Oued"],["خنشلة","Khenchela"],
+  ["سوق أهراس","Souk Ahras"],["تيبازة","Tipaza"],["ميلة","Mila"],["عين الدفلى","Ain Defla"],
+  ["النعامة","Naama"],["عين تموشنت","Ain Temouchent"],["غرداية","Ghardaia"],["غليزان","Relizane"],
+  ["أولاد جلال","Ouled Djellal"],["بني عباس","Beni Abbes"],["تقرت","Touggourt"],["تيميمون","Timimoun"],
+  ["جانت","Djanet"],["عين صالح","In Salah"],["عين قزام","In Guezzam"],["برج باجي مختار","Bordj Badji Mokhtar"],
+  ["المغير","El Meghaier"],["المنيعة","El Meniaa"]
+];
+
+// Iqama offsets (minutes) per your settings
+const IQAMA_OFFSET = { Fajr:15, Dhuhr:10, Asr:10, Maghrib:5, Isha:10 };
+const NAMES_AR = { Fajr:"الفجر", Dhuhr:"الظهر", Asr:"العصر", Maghrib:"المغرب", Isha:"العشاء" };
+const ORDER = ["Fajr","Dhuhr","Asr","Maghrib","Isha"];
+
+let timings = null, hijri = null, gregorian = null;
+let soundOn = false, notifOn = false;
+let firedAdhan = {}, firedIqama = {};
+let audioCtx = null;
+
+// ---------------- Adhkar & Adiya (from Hisn al-Muslim) ----------------
+const ADHKAR = {
+  morning: [
+    { text:"أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ", count:1 },
+    { text:"اللَّهُمَّ بِكَ أَصْبَحْنَا، وَبِكَ أَمْسَيْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ النُّشُورُ", count:1 },
+    { text:"آيَةُ الْكُرْسِيِّ: اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ...", count:1, note:"البقرة: 255" },
+    { text:"قُلْ هُوَ اللَّهُ أَحَدٌ (سورة الإخلاص)", count:3 },
+    { text:"قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ (سورة الفلق)", count:3 },
+    { text:"قُلْ أَعُوذُ بِرَبِّ النَّاسِ (سورة الناس)", count:3 },
+    { text:"اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ", count:3 },
+    { text:"اللَّهُمَّ إِنِّي أَسْأَلُكَ الْعَفْوَ وَالْعَافِيَةَ فِي الدُّنْيَا وَالْآخِرَةِ", count:1 },
+    { text:"حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ، عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ", count:7 },
+    { text:"سَيِّدُ الِاسْتِغْفَارِ: اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ، خَلَقْتَنِي وَأَنَا عَبْدُكَ، وَأَنَا عَلَى عَهْدِكَ وَوَعْدِكَ مَا اسْتَطَعْتُ...", count:1 },
+    { text:"سُبْحَانَ اللَّهِ وَبِحَمْدِهِ", count:100 },
+    { text:"لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ", count:10 },
+    { text:"أَسْتَغْفِرُ اللَّهَ وَأَتُوبُ إِلَيْهِ", count:100 },
+  ],
+  evening: [
+    { text:"أَمْسَيْنَا وَأَمْسَى الْمُلْكُ لِلَّهِ، وَالْحَمْدُ لِلَّهِ، لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ", count:1 },
+    { text:"اللَّهُمَّ بِكَ أَمْسَيْنَا، وَبِكَ أَصْبَحْنَا، وَبِكَ نَحْيَا، وَبِكَ نَمُوتُ وَإِلَيْكَ الْمَصِيرُ", count:1 },
+    { text:"آيَةُ الْكُرْسِيِّ: اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ ۚ لَا تَأْخُذُهُ سِنَةٌ وَلَا نَوْمٌ...", count:1, note:"البقرة: 255" },
+    { text:"قُلْ هُوَ اللَّهُ أَحَدٌ (سورة الإخلاص)", count:3 },
+    { text:"قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ (سورة الفلق)", count:3 },
+    { text:"قُلْ أَعُوذُ بِرَبِّ النَّاسِ (سورة الناس)", count:3 },
+    { text:"اللَّهُمَّ عَافِنِي فِي بَدَنِي، اللَّهُمَّ عَافِنِي فِي سَمْعِي، اللَّهُمَّ عَافِنِي فِي بَصَرِي، لَا إِلَهَ إِلَّا أَنْتَ", count:3 },
+    { text:"حَسْبِيَ اللَّهُ لَا إِلَهَ إِلَّا هُوَ، عَلَيْهِ تَوَكَّلْتُ وَهُوَ رَبُّ الْعَرْشِ الْعَظِيمِ", count:7 },
+    { text:"سُبْحَانَ اللَّهِ وَبِحَمْدِهِ", count:100 },
+    { text:"أَعُوذُ بِكَلِمَاتِ اللَّهِ التَّامَّاتِ مِنْ شَرِّ مَا خَلَقَ", count:3 },
+  ],
+  sleep: [
+    { text:"بِاسْمِكَ اللَّهُمَّ أَمُوتُ وَأَحْيَا", count:1 },
+    { text:"آيَةُ الْكُرْسِيِّ: اللَّهُ لَا إِلَهَ إِلَّا هُوَ الْحَيُّ الْقَيُّومُ...", count:1 },
+    { text:"قُلْ هُوَ اللَّهُ أَحَدٌ، قُلْ أَعُوذُ بِرَبِّ الْفَلَقِ، قُلْ أَعُوذُ بِرَبِّ النَّاسِ (تُقرأ وتُنفث في الكفين وتُمسح على الجسد)", count:3 },
+    { text:"سُبْحَانَ اللَّهِ", count:33 },
+    { text:"الْحَمْدُ لِلَّهِ", count:33 },
+    { text:"اللَّهُ أَكْبَرُ", count:34 },
+    { text:"اللَّهُمَّ أَسْلَمْتُ نَفْسِي إِلَيْكَ، وَفَوَّضْتُ أَمْرِي إِلَيْكَ، وَأَلْجَأْتُ ظَهْرِي إِلَيْكَ...", count:1 },
+  ],
+  wake: [
+    { text:"الْحَمْدُ لِلَّهِ الَّذِي أَحْيَانَا بَعْدَ مَا أَمَاتَنَا وَإِلَيْهِ النُّشُورُ", count:1 },
+    { text:"لَا إِلَهَ إِلَّا اللَّهُ وَحْدَهُ لَا شَرِيكَ لَهُ، لَهُ الْمُلْكُ وَلَهُ الْحَمْدُ، وَهُوَ عَلَى كُلِّ شَيْءٍ قَدِيرٌ، سُبْحَانَ اللَّهِ، وَالْحَمْدُ لِلَّهِ...", count:1 },
+    { text:"الْحَمْدُ لِلَّهِ الَّذِي عَافَانِي فِي جَسَدِي، وَرَدَّ عَلَيَّ رُوحِي، وَأَذِنَ لِي بِذِكْرِهِ", count:1 },
+  ],
+};
+const ADHKAR_TABS = [
+  { id:"morning", label:"☀️ الصباح" },
+  { id:"evening", label:"🌙 المساء" },
+  { id:"sleep", label:"😴 النوم" },
+  { id:"wake", label:"🌅 الاستيقاظ" },
+];
+let activeAdhkarTab = "morning";
+
+function renderAdhkarTabs(){
+  const wrap = $("adhkarTabs");
+  if(!wrap) return;
+  wrap.innerHTML = "";
+  ADHKAR_TABS.forEach(t=>{
+    const b = document.createElement("button");
+    b.className = "adhkar-tab" + (t.id===activeAdhkarTab ? " active" : "");
+    b.textContent = t.label;
+    b.addEventListener("click", ()=>{ activeAdhkarTab = t.id; renderAdhkarTabs(); renderAdhkarList(); });
+    wrap.appendChild(b);
+  });
+}
+
+function renderAdhkarList(){
+  const wrap = $("adhkarList");
+  if(!wrap) return;
+  wrap.innerHTML = "";
+  (ADHKAR[activeAdhkarTab] || []).forEach(item=>{
+    const div = document.createElement("div");
+    div.className = "adhkar-item";
+    div.innerHTML = `
+      <div class="adhkar-item-text">${item.text}</div>
+      <div class="adhkar-item-footer">
+        <span class="adhkar-item-count">${item.count > 1 ? "🔁 × " + item.count : ""}</span>
+        <span class="adhkar-item-src">${item.note ? item.note : "حصن المسلم"}</span>
+      </div>
+    `;
+    wrap.appendChild(div);
+  });
+  updateAdhkarDoneButton();
+}
+
+function todayKey(){
+  const d = new Date();
+  return `${d.getFullYear()}-${d.getMonth()+1}-${d.getDate()}`;
+}
+
+function isAdhkarDoneToday(kind){
+  return localStorage.getItem(`adhkar_done_${kind}_${todayKey()}`) === "1";
+}
+
+function markAdhkarDone(kind){
+  localStorage.setItem(`adhkar_done_${kind}_${todayKey()}`, "1");
+  cancelAdhkarFollowups(kind);
+  updateAdhkarDoneButton();
+}
+
+function updateAdhkarDoneButton(){
+  const btn = $("adhkarDoneBtn");
+  if(!btn) return;
+  const kind = (activeAdhkarTab === "evening") ? "evening" : "morning";
+  if(activeAdhkarTab !== "morning" && activeAdhkarTab !== "evening"){
+    btn.style.display = "none";
+    return;
+  }
+  btn.style.display = "block";
+  const done = isAdhkarDoneToday(kind);
+  btn.classList.toggle("done", done);
+  btn.textContent = done ? "✓ تم — بارك الله فيك" : "✓ قرأتها اليوم";
+}
+
+async function cancelAdhkarFollowups(kind, dateKey){
+  dateKey = dateKey || todayKey();
+  try{
+    if(!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform())) return;
+    const map = JSON.parse(localStorage.getItem("adhkar_id_map") || "{}");
+    const ids = (map[dateKey] && map[dateKey][kind]) || [];
+    if(ids.length){
+      const LN = window.Capacitor.Plugins.LocalNotifications;
+      await LN.cancel({ notifications: ids.map(i=>({id:i})) });
+    }
+  }catch(e){}
+}
+
+// ---------------- Adhan sound picker ----------------
+const ADHAN_SOUNDS = [
+  { id:"1", name:"الأذان 1", file:"./adhan-1.mp3", nativeSound:"adhan_1" },
+  { id:"2", name:"الأذان 2", file:"./adhan-2.mp3", nativeSound:"adhan_2" },
+  { id:"3", name:"الأذان 3", file:"./adhan-3.mp3", nativeSound:"adhan_3" },
+];
+let selectedAdhanId = localStorage.getItem("mawaqit_adhan_choice") || ADHAN_SOUNDS[0].id;
+let adhanAudioEl = null;   // used for the real adhan alert
+let previewAudioEl = null; // used for previewing in the picker
+let previewPlayingId = null;
+
+function getSelectedAdhan(){
+  return ADHAN_SOUNDS.find(a => a.id === selectedAdhanId) || ADHAN_SOUNDS[0];
+}
+
+function renderAdhanOptions(){
+  const wrap = $("adhanOptions");
+  if(!wrap) return;
+  wrap.innerHTML = "";
+  ADHAN_SOUNDS.forEach(sound=>{
+    const row = document.createElement("div");
+    row.className = "adhan-option" + (sound.id === selectedAdhanId ? " selected" : "");
+    row.innerHTML = `
+      <div class="adhan-option-name"><span class="adhan-radio"></span> ${sound.name}</div>
+      <button type="button" class="adhan-preview-btn" data-id="${sound.id}">▶</button>
+    `;
+    row.addEventListener("click", (ev)=>{
+      if(ev.target.closest(".adhan-preview-btn")) return; // handled separately
+      selectedAdhanId = sound.id;
+      localStorage.setItem("mawaqit_adhan_choice", selectedAdhanId);
+      renderAdhanOptions();
+      $("statusMsg").textContent = "✓ تم اختيار \"" + sound.name + "\" كصوت الأذان";
+      if(typeof isNative === "function" && isNative()) scheduleNativeAlarms();
+    });
+    row.querySelector(".adhan-preview-btn").addEventListener("click", (ev)=>{
+      ev.stopPropagation();
+      togglePreview(sound);
+    });
+    wrap.appendChild(row);
+  });
+}
+
+function togglePreview(sound){
+  if(!previewAudioEl){
+    previewAudioEl = new Audio();
+    previewAudioEl.addEventListener("ended", ()=>{
+      previewPlayingId = null;
+      updatePreviewButtons();
+    });
+  }
+  if(previewPlayingId === sound.id){
+    previewAudioEl.pause();
+    previewPlayingId = null;
+  }else{
+    previewAudioEl.pause();
+    previewAudioEl.src = sound.file;
+    previewAudioEl.currentTime = 0;
+    previewAudioEl.play().catch(()=>{
+      $("statusMsg").textContent = "⚠️ تعذّر تشغيل المعاينة.";
+    });
+    previewPlayingId = sound.id;
+  }
+  updatePreviewButtons();
+}
+
+function updatePreviewButtons(){
+  document.querySelectorAll(".adhan-preview-btn").forEach(btn=>{
+    const isPlaying = btn.dataset.id === previewPlayingId;
+    btn.classList.toggle("playing", isPlaying);
+    btn.textContent = isPlaying ? "❚❚" : "▶";
+  });
+}
+
+function playSelectedAdhan(){
+  // stop any preview so both don't overlap
+  if(previewAudioEl){ previewAudioEl.pause(); previewPlayingId = null; updatePreviewButtons(); }
+  try{
+    if(!adhanAudioEl) adhanAudioEl = new Audio();
+    adhanAudioEl.src = getSelectedAdhan().file;
+    adhanAudioEl.currentTime = 0;
+    const p = adhanAudioEl.play();
+    if(p && p.catch) p.catch(()=>{ playAdhanChimeFallback(); });
+  }catch(e){
+    playAdhanChimeFallback();
+  }
+}
+
+const $ = id => document.getElementById(id);
+const sel = $("wilaya");
+
+function pad(n){ return String(n).padStart(2,"0"); }
+
+function toMinutes(t){
+  const [h,m] = t.split(":").map(Number);
+  return h*60+m;
+}
+function fmt12(t){
+  let [h,m] = t.split(":").map(Number);
+  const suf = h>=12 ? "م" : "ص";
+  h = h % 12; if(h===0) h=12;
+  return `${pad(h)}:${pad(m)} ${suf}`;
+}
+function addMinutes(t, mins){
+  let total = toMinutes(t) + mins;
+  total = ((total % 1440)+1440)%1440;
+  return `${pad(Math.floor(total/60))}:${pad(total%60)}`;
+}
+
+async function loadTimings(city){
+  $("statusMsg").textContent = "جارٍ تحميل المواقيت...";
+  try{
+    const url = `https://api.aladhan.com/v1/timingsByCity?city=${encodeURIComponent(city)}&country=Algeria&method=19`;
+    const res = await fetch(url);
+    const data = await res.json();
+    if(data.code !== 200) throw new Error("bad response");
+    timings = data.data.timings;
+    hijri = data.data.date.hijri;
+    gregorian = data.data.date.gregorian;
+    firedAdhan = {}; firedIqama = {};
+    render();
+    $("statusMsg").textContent = "✓ المواقيت محمَّلة — التنبيه جاهز (فعِّل الصوت أو الإشعارات من الأزرار أدناه)";
+    setTimeout(()=>{ if($("statusMsg").textContent.startsWith("✓")) $("statusMsg").textContent=""; }, 4000);
+  }catch(e){
+    $("statusMsg").textContent = "⚠️ تعذّر جلب المواقيت (" + (e && e.message ? e.message : "خطأ شبكة") + "). تحقّق من الاتصال وأعد المحاولة.";
+  }
+}
+
+function render(){
+  if(!timings) return;
+  $("gregDate").textContent = `${gregorian.day} ${gregorian.month.en} ${gregorian.year}`;
+  $("hijriDate").textContent = `${hijri.day} ${hijri.month.ar} ${hijri.year}هـ`;
+
+  const grid = $("grid");
+  grid.innerHTML = "";
+  ORDER.forEach(key=>{
+    const adhanTime = timings[key];
+    const iqamaTime = addMinutes(adhanTime, IQAMA_OFFSET[key]);
+    const card = document.createElement("div");
+    card.className = "card";
+    card.id = "card-"+key;
+    card.innerHTML = `
+      <div class="name">${NAMES_AR[key]}</div>
+      <div class="adhan">${fmt12(adhanTime)}</div>
+      <div class="iqama">الإقامة: <b>${fmt12(iqamaTime)}</b></div>
+    `;
+    grid.appendChild(card);
+  });
+  tick();
+}
+
+function getNextPrayer(){
+  const now = new Date();
+  const nowMin = now.getHours()*60 + now.getMinutes() + now.getSeconds()/60;
+  for(const key of ORDER){
+    if(toMinutes(timings[key]) > nowMin) return key;
+  }
+  return null; // after Isha -> next is tomorrow's Fajr
+}
+
+function beep(freq=880, dur=0.35, delay=0){
+  try{
+    if(!audioCtx) audioCtx = new (window.AudioContext || window.webkitAudioContext)();
+    const t0 = audioCtx.currentTime + delay;
+    const osc = audioCtx.createOscillator();
+    const gain = audioCtx.createGain();
+    osc.frequency.value = freq;
+    osc.type = "sine";
+    gain.gain.setValueAtTime(0.0001, t0);
+    gain.gain.exponentialRampToValueAtTime(0.25, t0+0.05);
+    gain.gain.exponentialRampToValueAtTime(0.0001, t0+dur);
+    osc.connect(gain).connect(audioCtx.destination);
+    osc.start(t0); osc.stop(t0+dur+0.05);
+  }catch(e){}
+}
+function playAdhanChimeFallback(){
+  [660,880,660,990].forEach((f,i)=>beep(f,0.3,i*0.35));
+}
+function playAdhanChime(){
+  playSelectedAdhan();
+}
+function playIqamaChime(){
+  [990,990].forEach((f,i)=>beep(f,0.25,i*0.3));
+}
+
+function notify(title, body){
+  if(notifOn && "Notification" in window && Notification.permission === "granted"){
+    new Notification(title, { body, silent:true });
+  }
+}
+
+function tick(){
+  if(!timings) return;
+  document.querySelectorAll(".card").forEach(c=>c.classList.remove("active","pulse"));
+
+  const now = new Date();
+  const nowMin = now.getHours()*60 + now.getMinutes() + now.getSeconds()/60;
+  const todayKey = now.toDateString();
+
+  // fire adhan / iqama alerts
+  ORDER.forEach(key=>{
+    const aMin = toMinutes(timings[key]);
+    const iTime = addMinutes(timings[key], IQAMA_OFFSET[key]);
+    const iMin = toMinutes(iTime);
+    const aId = todayKey+key+"a", iId = todayKey+key+"i";
+
+    if(Math.abs(nowMin - aMin) < 0.06 && !firedAdhan[aId]){
+      firedAdhan[aId] = true;
+      if(soundOn) playAdhanChime();
+      notify("حان وقت الأذان — "+NAMES_AR[key], "أذان "+NAMES_AR[key]+" الآن");
+    }
+    if(Math.abs(nowMin - iMin) < 0.06 && !firedIqama[iId]){
+      firedIqama[iId] = true;
+      if(soundOn) playIqamaChime();
+      notify("الإقامة — "+NAMES_AR[key], "حان وقت إقامة صلاة "+NAMES_AR[key]);
+    }
+  });
+
+  const next = getNextPrayer();
+  let targetMin, label, timeStr, cardKey;
+  if(next){
+    targetMin = toMinutes(timings[next]);
+    label = NAMES_AR[next];
+    timeStr = fmt12(timings[next]);
+    cardKey = next;
+  }else{
+    targetMin = toMinutes(timings["Fajr"]) + 1440;
+    label = NAMES_AR["Fajr"] + " (غداً)";
+    timeStr = fmt12(timings["Fajr"]);
+    cardKey = "Fajr";
+  }
+  const card = $("card-"+cardKey);
+  if(card){ card.classList.add("active"); if(targetMin-nowMin < 15) card.classList.add("pulse"); }
+
+  const diffSec = Math.max(0, Math.round((targetMin - nowMin)*60));
+  const h = Math.floor(diffSec/3600);
+  const m = Math.floor((diffSec%3600)/60);
+  const s = diffSec%60;
+  $("countdown").textContent = `${pad(h)}:${pad(m)}:${pad(s)}`;
+  $("nextName").textContent = label;
+  $("nextTime").textContent = "الأذان الساعة " + timeStr;
+}
+
+$("notifBtn").addEventListener("click", async ()=>{
+  if(!("Notification" in window)){
+    $("statusMsg").textContent = "⚠️ متصفحك لا يدعم إشعارات النظام.";
+    return;
+  }
+  if(Notification.permission !== "granted"){
+    const perm = await Notification.requestPermission();
+    if(perm !== "granted"){
+      $("statusMsg").textContent = "⚠️ لم يتم منح إذن الإشعارات — فعّله من إعدادات المتصفح.";
+      return;
+    }
+  }
+  notifOn = !notifOn;
+  $("notifBtn").classList.toggle("on", notifOn);
+  $("statusMsg").textContent = notifOn ? "✓ إشعارات المتصفح مفعّلة الآن" : "تم إيقاف إشعارات المتصفح";
+});
+
+$("soundBtn").addEventListener("click", ()=>{
+  soundOn = !soundOn;
+  $("soundBtn").classList.toggle("on", soundOn);
+  if(soundOn){ beep(880,0.2,0); } // unlock audio context on user gesture
+  $("statusMsg").textContent = soundOn ? "✓ صوت التنبيه مفعّل — جرّب الآن نغمة اختبار" : "تم إيقاف صوت التنبيه";
+});
+
+function flashCard(){
+  const active = document.querySelector(".card.active");
+  if(active){
+    active.classList.add("pulse");
+    setTimeout(()=>active.classList.remove("pulse"), 2500);
+  }
+  $("heroBox").classList.add("pulse");
+  setTimeout(()=>$("heroBox").classList.remove("pulse"), 2500);
+}
+
+$("testAdhanBtn").addEventListener("click", ()=>{
+  playAdhanChime();
+  flashCard();
+  notify("حان وقت الأذان — تجربة", "هكذا سيبدو تنبيه الأذان الحقيقي");
+  $("statusMsg").textContent = "🔊 هذه تجربة لصوت وشكل تنبيه الأذان — إن لم تسمع صوتاً فعِّل زر \"الصوت عند الأذان\" أولاً";
+});
+
+$("testIqamaBtn").addEventListener("click", ()=>{
+  playIqamaChime();
+  flashCard();
+  notify("الإقامة — تجربة", "هكذا سيبدو تنبيه الإقامة الحقيقي");
+  $("statusMsg").textContent = "🔔 هذه تجربة لصوت وشكل تنبيه الإقامة";
+});
+
+window.addEventListener("error", (ev)=>{
+  const el = document.getElementById("statusMsg");
+  if(el) el.textContent = "⚠️ خطأ في التطبيق: " + ev.message;
+});
+
+// ---------------- PWA install ----------------
+let deferredPrompt = null;
+const installBtn = $("installBtn");
+
+function isIOS(){
+  return /iphone|ipad|ipod/i.test(navigator.userAgent);
+}
+function isStandalone(){
+  return window.matchMedia("(display-mode: standalone)").matches || window.navigator.standalone === true;
+}
+
+if(!isStandalone()){
+  if(isIOS()){
+    installBtn.style.display = "flex";
+    installBtn.addEventListener("click", ()=>{
+      $("statusMsg").textContent = "📲 لتثبيت التطبيق: اضغط زر المشاركة (Share) بالأسفل ← ثم \"إضافة إلى الشاشة الرئيسية\"";
+    });
+  }else{
+    window.addEventListener("beforeinstallprompt", (e)=>{
+      e.preventDefault();
+      deferredPrompt = e;
+      installBtn.style.display = "flex";
+    });
+    installBtn.addEventListener("click", async ()=>{
+      if(!deferredPrompt) return;
+      deferredPrompt.prompt();
+      const choice = await deferredPrompt.userChoice;
+      deferredPrompt = null;
+      installBtn.style.display = "none";
+      $("statusMsg").textContent = choice.outcome === "accepted" ? "✓ تم تثبيت التطبيق" : "";
+    });
+  }
+}
+
+if("serviceWorker" in navigator){
+  window.addEventListener("load", ()=>{
+    navigator.serviceWorker.register("./sw.js").then((reg)=>{
+      // Check for a new version every time the app is opened
+      reg.update().catch(()=>{});
+
+      // A new SW finished installing -> activate it immediately
+      reg.addEventListener("updatefound", ()=>{
+        const nw = reg.installing;
+        if(!nw) return;
+        nw.addEventListener("statechange", ()=>{
+          if(nw.state === "installed" && navigator.serviceWorker.controller){
+            nw.postMessage({ type:"SKIP_WAITING" });
+          }
+        });
+      });
+    }).catch(()=>{});
+
+    // Once the new SW takes control, reload once to load the fresh files
+    let refreshed = false;
+    navigator.serviceWorker.addEventListener("controllerchange", ()=>{
+      if(refreshed) return;
+      refreshed = true;
+      window.location.reload();
+    });
+  });
+}
+
+// Works in both the Claude artifact preview (window.storage) and the real
+// installed native app / plain browser (falls back to localStorage there).
+async function storageSet(key, val){
+  try{ if(window.storage){ await window.storage.set(key, val, false); return; } }catch(e){}
+  try{ localStorage.setItem(key, val); }catch(e){}
+}
+async function storageGet(key){
+  try{ if(window.storage){ const r = await window.storage.get(key, false); return r ? r.value : null; } }catch(e){}
+  try{ return localStorage.getItem(key); }catch(e){ return null; }
+}
+
+sel.addEventListener("change", async ()=>{
+  await storageSet("last-wilaya", sel.value);
+  loadTimings(sel.value);
+  if(isNative()) scheduleNativeAlarms();
+});
+
+// ================= Native background alarms (Capacitor) =================
+// Works ONLY inside the installed Android app (not in a regular browser tab).
+// Schedules real OS alarms for the next NATIVE_DAYS days, so alerts fire
+// even if the app is fully closed — same mechanism real adhan apps use.
+const NATIVE_DAYS = 15;
+const isNative = () => !!(window.Capacitor && window.Capacitor.isNativePlatform && window.Capacitor.isNativePlatform());
+
+function monthsToFetch(startDate, days){
+  const months = new Set();
+  for(let i=0;i<days;i++){
+    const d = new Date(startDate); d.setDate(d.getDate()+i);
+    months.add(d.getFullYear()+"-"+(d.getMonth()+1));
+  }
+  return [...months].map(s=>{ const [y,m]=s.split("-").map(Number); return {y,m}; });
+}
+
+async function fetchCalendar(city, y, m){
+  const url = `https://api.aladhan.com/v1/calendarByCity/${y}/${m}?city=${encodeURIComponent(city)}&country=Algeria&method=19`;
+  const res = await fetch(url);
+  const data = await res.json();
+  return data.code === 200 ? data.data : [];
+}
+
+async function scheduleNativeAlarms(){
+  if(!isNative()){
+    $("statusMsg").textContent = "⚠️ التنبيهات في الخلفية تعمل فقط داخل تطبيق أندرويد المثبّت (APK) — وليس في متصفح عادي.";
+    return;
+  }
+  const LN = window.Capacitor.Plugins.LocalNotifications;
+  try{
+    const perm = await LN.requestPermissions();
+    if(perm.display !== "granted"){
+      $("statusMsg").textContent = "⚠️ لم يُمنح إذن التنبيهات. فعّله من إعدادات التطبيق.";
+      return;
+    }
+
+    $("statusMsg").textContent = "⏳ جارٍ جدولة منبهات الأذان لمدة " + NATIVE_DAYS + " يوماً...";
+
+    const city = sel.value;
+    const today = new Date();
+    const months = monthsToFetch(today, NATIVE_DAYS);
+    let dayEntries = [];
+    for(const {y,m} of months){
+      const cal = await fetchCalendar(city, y, m);
+      dayEntries = dayEntries.concat(cal);
+    }
+
+    // cancel any previously scheduled alarms from this app first
+    const pending = await LN.getPending();
+    if(pending.notifications && pending.notifications.length){
+      await LN.cancel({ notifications: pending.notifications.map(n=>({id:n.id})) });
+    }
+
+    const soundFile = (typeof selectedAdhanId !== "undefined" && ADHAN_SOUNDS)
+      ? (ADHAN_SOUNDS.find(s=>s.id===selectedAdhanId) || {}).nativeSound
+      : null;
+    const adhanChannelId = "adhan-alerts-" + (selectedAdhanId || "1"); // one channel per sound choice
+
+    const now = Date.now();
+    const notifications = [];
+    let id = 1;
+    const cutoff = new Date(today); cutoff.setDate(cutoff.getDate()+NATIVE_DAYS);
+    const adhkarIdMap = {}; // { "YYYY-M-D": { morning:[ids], evening:[ids] } }
+
+    for(const entry of dayEntries){
+      // entry.date.gregorian.date is like "06-08-2026" (dd-mm-yyyy)
+      const [dd,mm,yyyy] = entry.date.gregorian.date.split("-").map(Number);
+      const dkey = `${yyyy}-${mm}-${dd}`;
+      for(const key of ORDER){
+        const [hh,mi] = entry.timings[key].split(" ")[0].split(":").map(Number);
+        const adhanDate = new Date(yyyy, mm-1, dd, hh, mi, 0);
+        if(adhanDate.getTime() <= now || adhanDate > cutoff) continue;
+
+        notifications.push({
+          id: id++,
+          title: "حان وقت الأذان — " + NAMES_AR[key],
+          body: "أذان " + NAMES_AR[key] + " الآن",
+          schedule: { at: adhanDate, allowWhileIdle: true },
+          sound: soundFile || null,
+          channelId: adhanChannelId
+        });
+
+        const iqamaDate = new Date(adhanDate.getTime() + IQAMA_OFFSET[key]*60000);
+        if(iqamaDate <= cutoff){
+          notifications.push({
+            id: id++,
+            title: "الإقامة — " + NAMES_AR[key],
+            body: "حان وقت إقامة صلاة " + NAMES_AR[key],
+            schedule: { at: iqamaDate, allowWhileIdle: true },
+            channelId: "iqama-alerts"
+          });
+        }
+
+        // ---- Adhkar reminders (morning after Fajr, evening after Maghrib) ----
+        // Fires shortly after the prayer, then follows up twice (every 2h) if not
+        // marked "read" — the follow-ups get cancelled automatically once the user
+        // taps "قرأتها" (either the notification action button or the in-app button).
+        if(key === "Fajr" || key === "Maghrib"){
+          const kind = key === "Fajr" ? "morning" : "evening";
+          const label = key === "Fajr" ? "أذكار الصباح" : "أذكار المساء";
+          const offsets = [10, 130, 250]; // minutes after adhan: first reminder, +2h, +4h
+          const ids = [];
+          offsets.forEach(offMin=>{
+            const t = new Date(adhanDate.getTime() + offMin*60000);
+            if(t <= now || t > cutoff) return;
+            const nid = id++;
+            ids.push(nid);
+            notifications.push({
+              id: nid,
+              title: "📿 " + label,
+              body: "لم تنسَ " + label + "؟ اضغط \"قرأتها\" إن انتهيت",
+              schedule: { at: t, allowWhileIdle: true },
+              channelId: "adhkar-alerts",
+              actionTypeId: "ADHKAR_ACTIONS",
+              extra: { kind, date: dkey }
+            });
+          });
+          if(ids.length){
+            adhkarIdMap[dkey] = adhkarIdMap[dkey] || {};
+            adhkarIdMap[dkey][kind] = ids;
+          }
+        }
+
+        // ---- Quran reading reminder after Fajr & Maghrib ----
+        if(key === "Fajr" || key === "Maghrib"){
+          const qTime = new Date(adhanDate.getTime() + 30*60000);
+          if(qTime > now && qTime <= cutoff){
+            notifications.push({
+              id: id++,
+              title: "📖 وردك من القرآن",
+              body: "لا تنسَ نصيبك اليوم من قراءة القرآن الكريم",
+              schedule: { at: qTime, allowWhileIdle: true },
+              channelId: "quran-alerts"
+            });
+          }
+        }
+      }
+    }
+
+    // Android 8+ locks a channel's sound at creation time and ignores later changes,
+    // so we create one channel PER adhan choice (created once, harmless if repeated)
+    // plus one fixed channel for iqama beeps.
+    if(LN.createChannel){
+      for(const s of ADHAN_SOUNDS){
+        await LN.createChannel({
+          id: "adhan-alerts-" + s.id, name: "تنبيه الأذان — " + s.name,
+          importance: 5, sound: s.nativeSound, vibration: true
+        });
+      }
+      await LN.createChannel({ id:"iqama-alerts", name:"تنبيه الإقامة", importance:4, sound:"iqama_beep", vibration:true });
+      await LN.createChannel({ id:"adhkar-alerts", name:"تذكير الأذكار", importance:3, vibration:true });
+      await LN.createChannel({ id:"quran-alerts", name:"تذكير القرآن", importance:3, vibration:true });
+    }
+
+    try{ localStorage.setItem("adhkar_id_map", JSON.stringify(adhkarIdMap)); }catch(e){}
+
+    // Android caps pending exact alarms; chunk if needed (schedule() accepts arrays fine)
+    await LN.schedule({ notifications });
+    await storageSet("native-schedule-until", cutoff.toISOString());
+
+    $("statusMsg").textContent = `✓ تم جدولة ${notifications.length} منبّه أذان وإقامة لمدة ${NATIVE_DAYS} يوماً — تعمل حتى لو أغلقت التطبيق تماماً. افتح التطبيق كل أسبوعين تقريباً لتجديد الجدولة.`;
+  }catch(e){
+    $("statusMsg").textContent = "⚠️ تعذّرت جدولة المنبهات: " + (e && e.message ? e.message : e);
+  }
+}
+
+(async function init(){
+  let saved = await storageGet("last-wilaya");
+  if(!saved) saved = "Oran";
+  sel.value = saved;
+  await loadTimings(saved);
+  renderAdhanOptions();
+  renderAdhkarTabs();
+  renderAdhkarList();
+  setInterval(tick, 1000);
+  // refresh timings at local midnight
+  setInterval(()=>{
+    const n = new Date();
+    if(n.getHours()===0 && n.getMinutes()===0 && n.getSeconds()<2){
+      loadTimings(sel.value);
+    }
+  }, 1500);
+
+  $("adhkarDoneBtn").addEventListener("click", ()=>{
+    const kind = (activeAdhkarTab === "evening") ? "evening" : "morning";
+    markAdhkarDone(kind);
+    $("statusMsg").textContent = "✓ بارك الله فيك — تم إيقاف التذكيرات المتبقية لليوم";
+  });
+
+  // ---- Native app: show background-alerts control and schedule automatically ----
+  if(isNative()){
+    const nc = $("nativeControls");
+    if(nc) nc.style.display = "flex";
+    $("nativeScheduleBtn").addEventListener("click", scheduleNativeAlarms);
+
+    const LN = window.Capacitor.Plugins.LocalNotifications;
+    try{
+      await LN.registerActionTypes({
+        types: [{ id:"ADHKAR_ACTIONS", actions: [{ id:"done", title:"قرأتها ✓" }] }]
+      });
+    }catch(e){}
+    LN.addListener("localNotificationActionPerformed", (data)=>{
+      try{
+        const extra = data && data.notification && data.notification.extra;
+        if(data.actionId === "done" && extra && extra.kind){
+          markAdhkarDone(extra.kind);
+        }
+      }catch(e){}
+    });
+
+    scheduleNativeAlarms(); // schedule immediately on every app open
+    // re-schedule roughly every 7 days if the app is kept open that long,
+    // and always on open to extend the rolling 15-day window
+    setInterval(scheduleNativeAlarms, 7*24*60*60*1000);
+  }
+})();
+
+</script>
+</body>
+</html>
