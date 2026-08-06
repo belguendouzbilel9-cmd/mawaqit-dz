@@ -1,0 +1,16 @@
+{
+  "appId": "com.mawaqit.dz.sadaqa",
+  "appName": "مواقيت الصلاة - الجزائر",
+  "webDir": "www",
+  "bundledWebRuntime": false,
+  "server": {
+    "androidScheme": "https"
+  },
+  "plugins": {
+    "LocalNotifications": {
+      "smallIcon": "ic_stat_icon",
+      "iconColor": "#CBA135",
+      "sound": "default"
+    }
+  }
+}
