@@ -1,0 +1,63 @@
+name: Build Android APK
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch: {}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Install npm dependencies
+        run: npm install
+
+      - name: Add Android platform
+        run: npx cap add android || true
+
+      - name: Sync Capacitor
+        run: npx cap sync android
+
+      - name: Copy app icon into Android resources
+        run: |
+          npx @capacitor/assets generate --android --iconBackgroundColor '#0A1F1C' --iconBackgroundColorDark '#0A1F1C' --splashBackgroundColor '#0A1F1C' --splashBackgroundColorDark '#0A1F1C' || echo "asset generation skipped (using existing icons)"
+
+      - name: Copy notification sound files into Android raw resources
+        run: |
+          mkdir -p android/app/src/main/res/raw
+          cp www/adhan-1.mp3 android/app/src/main/res/raw/adhan_1.mp3
+          cp www/adhan-2.mp3 android/app/src/main/res/raw/adhan_2.mp3
+          cp www/adhan-3.mp3 android/app/src/main/res/raw/adhan_3.mp3
+          cp www/iqama_beep.wav android/app/src/main/res/raw/iqama_beep.wav
+
+      - name: Copy notification status-bar icon
+        run: |
+          mkdir -p android/app/src/main/res/drawable
+          cp resources/notification-icon.png android/app/src/main/res/drawable/ic_stat_icon.png
+
+      - name: Grant execute permission for gradlew
+        run: chmod +x android/gradlew
+
+      - name: Build debug APK
+        working-directory: android
+        run: ./gradlew assembleDebug --stacktrace
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: mawaqit-dz-apk
+          path: android/app/build/outputs/apk/debug/app-debug.apk
